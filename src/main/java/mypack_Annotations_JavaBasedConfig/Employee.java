@@ -1,4 +1,4 @@
-package mypack_Annotations;
+package mypack_Annotations_JavaBasedConfig;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -6,12 +6,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 @Component
 public class Employee {
-	@Value("Ckp")
+	
 	private String ename;
-	@Value("SSC")
+	
 	private String role;
 	@Autowired
-	@Qualifier("address1")
 	private Address address;
 	public Employee() {
 		System.out.println("Construct");

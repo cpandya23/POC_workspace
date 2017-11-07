@@ -1,4 +1,4 @@
-package mypack_Annotations;
+package mypack_Annotations_ComponentScan;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -11,7 +11,6 @@ public class Employee {
 	@Value("SSC")
 	private String role;
 	@Autowired
-	@Qualifier("address1")
 	private Address address;
 	public Employee() {
 		System.out.println("Construct");
