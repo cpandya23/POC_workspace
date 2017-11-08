@@ -20,6 +20,9 @@ public class EmployeeAspect {
 	@After("execution (* mypack_AOP.Employee.display(..))")
 	public void afterAdvice() {
 		System.out.println("After Advice");
+		System.out.println("Data Updated on");
+		System.out.println(java.time.LocalDate.now());  
+		System.out.println(java.time.LocalTime.now());
 	}
 	
 	@AfterReturning(pointcut="execution (* mypack_AOP.Employee.get*(..))",returning="rvalue")
